@@ -1,0 +1,110 @@
+.home-sub-container{
+    border: 2px solid #89B4C5;
+    width: 200px;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.home-workspace-container{
+    border: 2px solid #89B4C5;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.home-workspace-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+.home-workspace-list-item{
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.home-workspace-list-item-title{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+.home-workspace-list-item:hover {
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.home-status-title{
+    flex: 1;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-right: 10px;
+}
+.status{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.home-status-link{
+    flex: 0;
+    cursor: pointer;
+}
+.selected {
+    border: 3px solid #000;
+    background-color: #fff;
+    border-radius: 40px;
+}
+.border-bottom{
+    border-bottom: 2px solid #000;
+}
+.border-right{
+    border-right: 2px solid #000;
+}
+.border-left{
+    border-left: 2px solid #000;
+}
+.border-top {
+    border-top: 2px solid #000;
+}
+td img, tr th img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+table {
+    position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+.desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+}
+.desktop:hover{
+    background-color: rgb(240, 240, 240);    
+}
+.desktop2{
+    cursor: pointer;
+    padding: 10px;
+}
+.desktop2:hover{
+    background-color: rgb(240, 240, 240);    
+}
+td span, th span{
+    font-weight: 600;
+    color: #000;
+}
