@@ -6,5 +6,5 @@
 - Sacha Melin
 - Khaled Mili
 - Noé Susset
-- Thomas Martin
+- Thomas Martin-Chemla
 - Armand BLIN
