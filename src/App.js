@@ -7,7 +7,6 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:workspace" element={<Home />} />
       </Routes>
     </div>
   );

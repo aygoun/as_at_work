@@ -108,3 +108,6 @@ td span, th span{
     font-weight: 600;
     color: #000;
 }
+.display-none{
+    display: none;
+}
