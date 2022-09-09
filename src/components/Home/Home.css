@@ -111,3 +111,8 @@ td span, th span{
 .display-none{
     display: none;
 }
+.speaking-style{
+    color: red;
+    font-weight: bold;
+    font-size: 1.5em;
+}

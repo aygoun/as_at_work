@@ -11,6 +11,7 @@ import desktop_meeting from "../assets/desktop_meeting.png";
 const Home = () => {
   const [selected, setSelected] = useState(0);
   const [selectedWorkspace, setSelectedWorkspace] = useState(0);
+  const [isPressed, setIsPressed] = useState(false);
 
   useEffect(() => {
     console.log("selected: ", selected);
@@ -75,13 +76,18 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {isPressed ? (<blink className="speaking-style"> Speaking... </blink>) : ""}
         {selectedWorkspace === 0 ? (
           <table className={selectedWorkspace === 2 ? "display-none" : ""}>
             <thead>
               <tr>
                 <th></th>
                 <th className="border-bottom desktop">
-                  <img src={desktop_available} alt="desktop" />
+                  <img
+                    src={desktop_available}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </th>
                 <th></th>
@@ -91,34 +97,63 @@ const Home = () => {
             <tbody>
               <tr>
                 <td className="border-right desktop">
-                  <img src={desktop_available} alt="desktop" />
+                  <img
+                    src={desktop_available}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </td>
                 <td></td>
                 <td className="border-left desktop">
-                  <img src={desktop_denied} alt="desktop" />
+                  <img
+                    src={desktop_denied}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </td>
                 <td></td>
               </tr>
               <tr>
                 <td className="border-right desktop">
-                  <img src={desktop_available} alt="desktop" />
+                  <img
+                    src={desktop_available}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </td>
                 <td></td>
                 <td className="border-left border-bottom desktop">
-                  <img src={desktop_available} alt="desktop" />
+                  <img
+                    src={desktop_available}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </td>
                 <td className="border-left border-top desktop2">
-                  <img src={desktop_meeting} alt="desktop" />
-                  <span className="">NAME</span>
+                  <img
+                    src={selected === 0 ? desktop_available : desktop_denied}
+                    alt="desktop"
+                    className={selected === 2 ? "display-none" : ""}
+                  />
+                  <img
+                    src={desktop_meeting}
+                    alt="desktop"
+                    className={selected !== 2 ? "display-none" : ""}
+                  />
+                  <span className="">YOU</span>
                 </td>
               </tr>
               <tr>
                 <td className="border-right desktop">
-                  <img src={desktop_meeting} alt="desktop" />
+                  <img
+                    src={desktop_meeting}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </td>
                 <td></td>
@@ -137,7 +172,11 @@ const Home = () => {
               <tr>
                 <th></th>
                 <th className="border-bottom desktop">
-                  <img src={desktop_available} alt="desktop" />
+                  <img
+                    src={desktop_available}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </th>
                 <th></th>
@@ -147,12 +186,20 @@ const Home = () => {
             <tbody>
               <tr>
                 <td className="border-right desktop border-bottom">
-                  <img src={desktop_available} alt="desktop" />
+                  <img
+                    src={desktop_available}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </td>
                 <td></td>
                 <td className="border-left desktop">
-                  <img src={desktop_denied} alt="desktop" />
+                  <img
+                    src={desktop_denied}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </td>
                 <td></td>
@@ -161,11 +208,19 @@ const Home = () => {
                 <td></td>
                 <td></td>
                 <td className="border-top desktop">
-                  <img src={desktop_available} alt="desktop" />
+                  <img
+                    src={desktop_available}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span>NAME</span>
                 </td>
                 <td className="border-top desktop2">
-                  <img src={desktop_meeting} alt="desktop" />
+                  <img
+                    src={desktop_meeting}
+                    alt="desktop"
+                    onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                  />
                   <span className="">NAME</span>
                 </td>
               </tr>
@@ -194,31 +249,55 @@ const Home = () => {
           <tbody>
             <tr>
               <td className="desktop">
-                <img src={desktop_available} alt="desktop" />
+                <img
+                  src={desktop_available}
+                  alt="desktop"
+                  onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                />
                 <span>NAME</span>
               </td>
               <td className="desktop">
-                <img src={desktop_available} alt="desktop" />
+                <img
+                  src={desktop_available}
+                  alt="desktop"
+                  onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                />
                 <span>NAME</span>
               </td>
             </tr>
             <tr>
               <td className="desktop">
-                <img src={desktop_available} alt="desktop" />
+                <img
+                  src={desktop_available}
+                  alt="desktop"
+                  onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                />
                 <span>NAME</span>
               </td>
               <td className="desktop">
-                <img src={desktop_available} alt="desktop" />
+                <img
+                  src={desktop_available}
+                  alt="desktop"
+                  onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                />
                 <span>NAME</span>
               </td>
             </tr>
             <tr>
               <td className="desktop">
-                <img src={desktop_available} alt="desktop" />
+                <img
+                  src={desktop_available}
+                  alt="desktop"
+                  onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                />
                 <span>NAME</span>
               </td>
               <td className="desktop">
-                <img src={desktop_available} alt="desktop" />
+                <img
+                  src={desktop_available}
+                  alt="desktop"
+                  onClick={() => isPressed ? setIsPressed(false): setIsPressed(true)}
+                />
                 <span>NAME</span>
               </td>
             </tr>
